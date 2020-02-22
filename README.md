@@ -36,3 +36,13 @@
   
   Prompted customer with minimum temperature and maximum temperature they prefer during their vacation, based on which filtered the cities which matches the criteria and displayed in the google map. Next to plan a vacation we need hotels in those destinations using google nearby places and filtering based on lodging as the type we got hotels to stay. Now we overlayed the hotel's information in the google map as a marker so customers can look at the details ![Map with hotel and additional information](weather_data/hotels_basedon_minTemp65_maxTemp80.png)
   
+
+## Challenge:
+
+### Overview:
+  
+  Generate the weather data for 500 cities with snowfall and rainfall details which would allow the customers to filter the cities not only based on temperature but also based on rain and snow details.
+  
+#### Step 1:
+   Created random latitude and longitude data for 500 odd cities and collected the nearest city name. Collected the weather data like Max Temperature, Humidity, Cloudiness, Wind Speed, Current Weather Description, Snowfall inches in the last 3hrs, Rainfall inches in the last 3hrs using open weather API and created a data frame and CSV file. ![City weather data with Snow and Rain details](weather_data/WeatherPy_challenge.csv)
+   Based on data we could see at least 22 cities had snow in the last 3 hrs and 66 cities had rain in the last 3 hrs, so a total of 88 cities either had snow or rain in the last 3 hrs.
