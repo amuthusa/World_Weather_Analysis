@@ -24,3 +24,15 @@
   2. Humidity: r-value : 0.27377222536773593,  p-value:0.00038935727752737495 (though correlation coefficient is +0.27 p-value is less than 5% seems the variable is not that significant)![Southern Hemisphere vs Humidity](weather_data/Fig8.png)
   3. Cloudiness: r-value : 0.2682112157983783,  p-value:0.0005159206750955315 (though correlation coefficient is +0.26 p-value is less than 5% seems the variable is less significant)![Southern Hemisphere vs Cloudiness](weather_data/Fig10.png)
   4. Wind Speed: r-value :-0.43536742932018563,  p-value:5.675881227274614e-09 (correlation coefficient is -0.435 p-value is less than 5% seems the variable is not significant)![Southern Hemisphere vs Wind Speed](weather_data/Fig12.png)
+
+### Google Maps integrations for heatmap and hotels:
+
+  For planning vacation we might need much more clarity, integrating with google maps API and creating heatmap with different variables like Max Temperature, Humidity, Cloudiness, Wind Speed would help PlanMyTrip customers plan better. We created heatmap with the 500 cities we got for our initial analysis
+  
+  1. Heatmap with Max Temperature ![Heatmap with Temperature](weather_data/heatmap_temperature.png)
+  2. Heatmap with Humidity ![Heatmap with Humidity](weather_data/heatmap_humidity.png)
+  3. Heatmap with Cloudiness ![Heatmap with Cloudiness](weather_data/heatmap_cloudiness.png)
+  4. Heatmap with Wind Speed ![Heatmap with Wind Speed](weather_data/heatmap_windspeed.png)
+  
+  Prompted customer with minimum temperature and maximum temperature they prefer during their vacation, based on which filtered the cities which matches the criteria and displayed in the google map. Next to plan a vacation we need hotels in those destinations using google nearby places and filtering based on lodging as the type we got hotels to stay. Now we overlayed the hotel's information in the google map as a marker so customers can look at the details ![Map with hotel and additional information](weather_data/hotels_basedon_minTemp65_maxTemp80.png)
+  
