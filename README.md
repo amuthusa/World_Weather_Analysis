@@ -2,11 +2,25 @@
 
 ## Overview:
 
-  Help PlanMyTrip customers find their ideal vacation spot along with hotel details based on their preference like weather.
+  Help PlanMyTrip customers find their ideal vacation spot along with hotel details based on their preferences like the weather.
   
-## Details:
+## Details Collected:
   
-  Inorder to help PlanMyTrip to help their customer we randomly generated 500 latitudes and longitudes, using citipy find the city details like name, country. Using open weather api we found the max temperature, wind speed, cloudiness, humidity of all the 500 cities and stored it in a csv file along with longitude,lattitude and country code for future use.
+  In order to help PlanMyTrip to help their customer, we randomly generated 500 latitudes and longitudes, using citipy find the city details like name, country. Using open weather API we found the max temperature, wind speed, cloudiness, humidity of all the 500 cities and stored it in a CSV file along with longitude, latitude and country code for future use.
   
- Created scattered chart a) Lattitude vs Max Temperature, b) Lattitude vs Humidity, c)Lattitude vs Cloudiness, d)Lattitude vs Wind Speed to see the correlation of different attributes. ![Lattidute vs Max Temperature](weather_data/Fig1.png)![Lattidute vs Humidity](weather_data/Fig2.png)![Lattidute vs Cloudiness](weather_data/Fig3.png)![Lattidute vs Wind Speed](weather_data/Fig4.png). Except Lattitude vs Max Temperature none of them seems to have any useful relationship.
+## Weather data analysis:
+
+  Created scattered chart a) Lattitude vs Max Temperature, b) Lattitude vs Humidity, c)Lattitude vs Cloudiness, d)Lattitude vs Wind Speed to see the correlation of different attributes. ![Lattidute vs Max Temperature](weather_data/Fig1.png)![Lattidute vs Humidity](weather_data/Fig2.png)![Lattidute vs Cloudiness](weather_data/Fig3.png)![Lattidute vs Wind Speed](weather_data/Fig4.png). Except for Lattitude vs Max Temperature, none of the other charts shows any useful correlation. As we move towards Northern Hemisphere the temperature is cooler in February while in the Equator it's warm or hot and as we move away from the equator to the Southern Hemisphere its reduces.
+  
+### Linear Regression based data analysis:
  
+  Using Linear regression we can validate our conclusion. By calculating the slope and y-intercept we can figure out the Max Temperature for every latitude using linear regression also r-value (correlation coefficient) closer to +1 will tell if both variables are strong relationship or closer to -1 being week relationship, p-value (probability value) again proves how well the 2 variables are either related or not related based on 5% value. If the p-value is less than 5% then both variables that are getting compared are not related or the comparison is not significant. Comparing weather data in Northern Hemisphere using linear regression
+  1. Max Temperature: r-value : -0.8807596156010387,  p-value:1.698585419988679e-135 (seems the variable is not significant)![Northern Hemisphere vs Max Temperature](weather_data/Fig5.png)
+  2. Humidity: r-value : 0.3768359237807389,  p-value:2.2057188721341102e-15 (though correlation coefficient is +0.37 p-value is less than 5% seems the variable is not that significant)![Northern Hemisphere vs Humidity](weather_data/Fig7.png)
+  3. Cloudiness: r-value : 0.2903003730407082,  p-value:1.8362698463992791e-09 (though correlation coefficient is +0.29 p-value is less than 5% seems the variable is less significant)![Northern Hemisphere vs Cloudiness](weather_data/Fig9.png)
+  4. Wind Speed: r-value : 0.12990631596543256,  p-value:0.008212263429416201 (though correlation coefficient is +0.129 p-value is less than 5% seems the variable is less significant)![Northern Hemisphere vs Wind Speed](weather_data/Fig11.png)
+  Similarly Comparing weather data in Southern Hemisphere using linear regression
+  1. Max Temperature: r-value : 0.5940077699761177,  p-value:5.124494771994631e-17 (though correlation coefficient is +0.59 the p-value is insignificant)![Southern Hemisphere vs Max Temperature](weather_data/Fig6.png)
+  2. Humidity: r-value : 0.27377222536773593,  p-value:0.00038935727752737495 (though correlation coefficient is +0.27 p-value is less than 5% seems the variable is not that significant)![Southern Hemisphere vs Humidity](weather_data/Fig8.png)
+  3. Cloudiness: r-value : 0.2682112157983783,  p-value:0.0005159206750955315 (though correlation coefficient is +0.26 p-value is less than 5% seems the variable is less significant)![Southern Hemisphere vs Cloudiness](weather_data/Fig10.png)
+  4. Wind Speed: r-value :-0.43536742932018563,  p-value:5.675881227274614e-09 (correlation coefficient is -0.435 p-value is less than 5% seems the variable is not significant)![Southern Hemisphere vs Wind Speed](weather_data/Fig12.png)
