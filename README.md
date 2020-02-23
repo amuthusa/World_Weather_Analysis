@@ -43,6 +43,14 @@
   
   Generate the weather data for 500 cities with snowfall and rainfall details which would allow the customers to filter the cities not only based on temperature but also based on rain and snow details.
   
-#### Step 1:
+#### Part 1:
    Created random latitude and longitude data for 500 odd cities and collected the nearest city name. Collected the weather data like Max Temperature, Humidity, Cloudiness, Wind Speed, Current Weather Description, Snowfall inches in the last 3hrs, Rainfall inches in the last 3hrs using open weather API and created a data frame and CSV file. ![City weather data with Snow and Rain details](weather_data/WeatherPy_challenge.csv)
    Based on data we could see at least 22 cities had snow in the last 3 hrs and 66 cities had rain in the last 3 hrs, so a total of 88 cities either had snow or rain in the last 3 hrs.
+
+### Part 2:
+
+   Narrowed down the search based on additional criteria on top of minimum temperature and maximum temperature like whether you want it raining and/or snowing. Based on those criteria further filtered the cities which met the criteria and saved the search as a CSV ![Preferred cities for vacationing](images/WeatherPy_vacation_map.png) 
+   
+### Part 3:
+  
+  In the above filtered preferred city list picked 4 of the cities for a vacation. To plan for vacation we had got the directions from starting point to ending point assuming the travel mode for this vacation is driving. For this vacation, we have selected Catamarca in Argentina, Coquimbo, Constitucion, Talcahuano in Chile ![Vacation from Catamarca, AR - Talcahuano, CL](images/WeatherPy_travel_map.png). Also the following is the map with additional details about the hotel to stay during the vacation ![Vacation from Catamarca, AR - Talcahuano, CL](images/WeatherPy_travel_map_markers.png)
